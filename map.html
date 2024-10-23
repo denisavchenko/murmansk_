@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея и Карта</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #galleryBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #mapBtn {
+            background-color: #f44336;
+            color: white;
+        }
+        .square {
+            width: 200px;
+            height: 200px;
+        }
+        .blue-square {
+            background-color: blue;
+        }
+        .red-square {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button id="galleryBtn" class="button" onclick="showSquare('gallery')">Галерея</button>
+        <button id="mapBtn" class="button" onclick="showSquare('map')">Карта</button>
+    </div>
+    <div id="square" class="square blue-square"></div>
+
+    <script>
+        function showSquare(type) {
+            const square = document.getElementById('square');
+            if (type === 'gallery') {
+                square.className = 'square blue-square';
+            } else if (type === 'map') {
+                square.className = 'square red-square';
+            }
+        }
+    </script>
+</body>
+</html>

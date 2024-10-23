@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>denisavchenko</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="fonts/fonts">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+    <script src="script.js"></script>
+
+
+
+
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                    <img src="data/Untitled-1.png" alt="">
+                    <!-- <a href="index.html">SAVAN <br> MEDIA GROUP</a>-->
+                    
+                    </div>
+                    <div class="header-top-center">
+                        <a href="" class="Possibilities">Возможности</a>
+    
+                        <a href="" class="Our-projects">Проекты</a>
+    
+                        <!--<a href="Team.html" class="Team">Команда</a> -->
+    
+                        <a href="" class="Blog">Блог</a>
+                    </div>
+                    <!-- <div class="header-top-right"> <button href=""  class="button-write">Написать нам</button> </div> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="container-third">
+    <div class="search"> <script src="test/dynamicText.js"></script>
+        <div class="header-search"> 
+            Поехали в Мурманск
+        </div>
+        <div class="header-search-bottom">
+            Гид гайды про города и регионы только с важной <br>
+            информацией
+        </div>
+        
+        <div class="search-stroka">
+            <input type="text" id="searchInput" placeholder="Куда отправимся сегодня?" oninput="filterItems()">
+        </div>
+
+        <div class="search-buttons">
+            <button id="galleryBtn" class="custom-button gallery-button" onclick="showGallery()">Каталог</button>
+            <button id="mapBtn" class="custom-button map-button" onclick="showMap()">Карта</button>
+        </div>
+    </div>
+
+    <!-- Секция с элементами каталога -->
+    <div id="galleryContainer" class="search-gallary-item">
+        <div class="search-item" data-name="Мурманская область">
+            <div class="search-item-box">
+                <a href="murmansk.html" target="_blank">
+                    <img src="pic/Mask group (2).png" alt="">
+                </a>
+            </div>
+            <div class="search-item-header">Россия</div>
+            <div class="search-item-body">Мурманская область</div>
+        </div>
+        
+
+        <div class="search-item" data-name="Камчатский край">
+            <div class="search-item-box">
+                <a href="murmansk.html" target="_blank">
+                    <img src="pic/Mask group (1).png" alt="">
+                </a>
+            </div>
+            <div class="search-item-header">Россия</div>
+            <div class="search-item-body">Камчатский край</div>
+        </div>
+
+    </div>
+    
+    <div id="mapContainer"> <!-- Скрываем контейнер глобуса по умолчанию -->
+        <div class="search-globus">
+            <div id="map-search"> 
+                <script src="test/mapSearch.js"></script>
+            </div>
+        </div>
+    </div>
+            
+        
+            <div id="noResults">
+                Мы пока не добавили это место, <br>
+                либо Вы могли ошибиться в названии
+            </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
